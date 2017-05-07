@@ -1,0 +1,20 @@
+---
+layout:     post
+title:      "关于此博客"
+date:       2017-05-07 21:16:00
+author:     "CreeperSan"
+header-img: "img/post/about/header.jpg"
+tags:
+    - 博客
+---
+
+## Hello World
+
+初次来到Github，小弟才疏学浅、孤陋寡闻、经验更少，请多指教。
+
+特别感谢[Cyzus](http://http://cyzus.github.io/2015/06/21/github-build-blog/)、[Hux](http://huangxuan.me/)，要是没有它们的[教程](http://cyzus.github.io/2015/06/21/github-build-blog/)与[模板](https://github.com/Huxpro/huxpro.github.io)，这个博客也许将不会存在。
+
+嗯，想不到说什么了，就这样。
+
+:)
+
