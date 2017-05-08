@@ -30,6 +30,8 @@ tags:
 3. 布局布线(元件布局布置，连线，铺铜)
 4. 导出制造文件(整理丝印，导出光绘文件)
 
+[表格显示有问题，点击这里跳转→](https://github.com/CreeperSan/creepersan.github.io/blob/master/_posts/2017-05-08-about-orcad-and-pads.markdown)
+
 #### 常用原理图元件
 |元件名称|对应名称|
 |------|--------|
