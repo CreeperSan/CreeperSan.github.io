@@ -37,7 +37,7 @@ tags:
 ------------
 
 Android尝试用for循环循环疯狂读取读取扇区
-![](/img/post/170510mifare-ultralight-c/0.jpg)
+![](/img/post/170510mifare-ultralight-c/1.jpg)
 
 剩下的了解再补充...
 
