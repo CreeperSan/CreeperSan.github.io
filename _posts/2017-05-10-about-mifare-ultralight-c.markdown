@@ -12,7 +12,7 @@ tags:
 
 ## Mifare Ultralight C
 
-![](img/post/170510mifare-ultralight-c/0.jpg)
+![](/img/post/170510mifare-ultralight-c/0.jpg)
 
 偶然接触到了一个NFC标签，使用的是NXP的Mifare Ultralight C，因为第一次接触，就去百度了下，可惜没找到什么资料,这里就自己归纳了下一点个人的看法以及网上的一些资料，仍然有很多东西不懂。
 
@@ -37,7 +37,7 @@ tags:
 ------------
 
 Android尝试用for循环循环疯狂读取读取扇区
-![](img/post/170510mifare-ultralight-c/0.jpg)
+![](/img/post/170510mifare-ultralight-c/0.jpg)
 
 剩下的了解再补充...
 
