@@ -9,7 +9,9 @@ tags:
     - Android Studio
 ---
 
-打开Android Studio,File - Setting,找到下面红圈，去掉就好了
+打开Android Studio,File - Setting - Application & Behavour - System Setting - Reopen last project on startup
+
+找到下面红圈，去掉就好了
 
 ![](/img/post/170514androud-studio-open-history-file/1.jpg)
 
