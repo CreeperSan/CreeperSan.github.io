@@ -1,0 +1,132 @@
+---
+layout:     post
+title:      "HTML"
+date:       2017-06-13 21:39:00
+author:     "CreeperSan"
+header-img: "img/post/170507about/header.jpg"
+tags:
+    - HTML
+    - CSS
+    - 网页
+---
+
+## 网页
+
++ 学习网页前端制作的三座大山
+	+ HTML，网页内容的载体
+	+ CSS样式是表现。
+	+ JavaScript是用来实现网页上的特效效果。
+
++ HTML标签不区分大小写
++ <!-- 注释 \-\-\>
++ 标签的说明
+	+ html，根标签，所有的网页都在这个中间
+	+ head，头部，是头部元素容器
+		+ title 网页的标题
+		+ style 可以自定义css作为样式应用到制定的标签中
+	+ body，网页的主要元素内容
+		+ p 段落
+		+ h1~h6 6种大小不同的标题
+		+ em 强调，默认是倾斜字体
+		+ strong 强调，默认是加粗字体
+		+ span，没有语义，目的就是为了设置单独样式
+		+ q，表明是引用短文本
+		+ blockquote，表示长文本引用
+		+ br，表示换行
+		+ &amp;nbsp; 表示空格
+		+ hr，表示水平分割线
+		+ address，表示地址信息，默认为斜体
+		+ code，表示为代码
+		+ pre表示为大段代码
+		+ ul表示无序列表，li表示无序列表的其中一项。
+		+ ol表示有序列表，li表示有序列表的一项
+		+ div表示网页中的一个容器。其中标签内id属性为div的唯一标识
+		+ table表示一个表格，在这里面tr表示表格的一行，tr里面td表示一个单元格。th表示表格头部的一个单元格。tbody则表示表格不必等待全部加载完毕再显示，可以加载多少显示多少。table下summary属性为表格的摘要，table里面caption标签为表格的标题。
+		+ a表示为超链接，其中href属性为点击跳转的链接，title为鼠标悬停显示的提示文本。a标签增加target="_blank"则可以表明在新标签中打开页面。关于a标签的bref属性，若填写mailto则表明是发送邮件，href="mailto:2@2.cn?cc=1@1.com"表明向2@2.cn发送邮件，抄送地址是1@1.com，类似的bcc=表示密件抄送地址,;表示mailto的分割符，subject=表示邮件主题,body=表示邮件内容。如果mailto有多个收件人，则第一个分隔符用?，其他的分隔符用&。
+		+ img表示图片，src属性表示图片的地址，alt属性表示图像的描述文本，title属性表示图像可见时的描述。图像可以是jpg,png,gif
+		+ form表示表单标签，可以和用户进行交互，其中method标签决定数据传送的方式，action表示浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)
+			+ label表示文本
+			+ input表示输入框,type属性表明输入框的类型，假如为password则表明时密码输入框。name属性表明文本框的命名，用于ASP,PHP地方的使用,value表示默认值
+			+ textarea 表示文本输入域，用来输入大段的文字,成对出现。其包裹的内容为默认值，cols属性表示为列数，rows属性表示行数
+			+ input也可以表示选择框,type属性为radio则是单选checkbox则是多选,value属性为提交到服务器的值，name为控件名，checked属性假如为"checked"时则为默认选中，值得注意的是，同一组的radio其name取值必须一致
+			+ select表示下拉选择列表，若增加multiple="multiple"则表明是多选的，其子标签option中value属性表明向服务器提交的值，option标签夹着的为显示的值,selected="selected"表示选项默认选中。
+			+ 提交按钮input,设置type="submit",value属性为按钮上的文字
+			+ 重置表单input,设置type="reset"，value属性表示按钮上的文字
+			+ lable标签，不会为用户呈现特殊的效果，其作用是为鼠标用户改进了可用性，如果你在 label 标签内点击文本，就会触发此控件。就是说，当用户单击选中该label标签时，浏览器就会自动将焦点转到和标签相关的表单控件上（就自动选中和该label标签相关连的表单控件上）。其中for属性表示跳转到制定id名称的控件（for属性中的值必须要和id属性值一致）。
+
++ CSS样式
+	CSS全称为“层叠样式表 (Cascading Style Sheets)”，它主要是用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。使用CSS样式的一个好处是通过定义某个样式，可以让不同网页位置的文字有着统一的字体、字号或者颜色等。
+	+ 例如这个 p{color:blue;} 中，p为选择符，也就是对象，color为属性，blue为值
+	+ 其注释代码与java的多行注释符是一样的
+	+ css样式也可以直接写在标签的style属性中，写在开头标签或者结尾标签都可以，例如为style=""
+	+ css样式也可以写在head标签里面，标签名为style
+	+ css夜视仪写在一个外部文件中，一般写在head标签中，比如这样写&lt;link href=&quot;<strong>base.css</strong>&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;，其中rel与type是固定写法，不可改变
+	+ css样式的优先级 内敛>嵌入>外部
+	+ css样式分成2部分，如下 选择器{样式;}
+	+ css样式的类选择器 .类名{样式;} ，使用时可以这样标签中属性class="类名"
+	+ css的ID选择器，#ID{样式;},使用时可以这样标签中属性class="ID名"
+	+ css样式的类选择器与ID选择器的区别。
+		1. ID选择器只能在文档中使用一次。与类选择器不同，在一个HTML文档中，ID选择器只能使用一次，而且仅一次。而类选择器可以使用多次。
+		2. 可以使用类选择器词列表方法为一个元素同时设置多个样式。我们可以为一个元素同时设多个样式，但只可以用类选择器的方法实现，ID选择器是不可以的（不能使用 ID 词列表）。
+	+ 还有一个比较有用的选择器子选择器，即大于符号(>),用于选择指定标签元素的第一代子元素。如代码：.food&gt;li{border:1px solid red;这行代码会使class名为food下的子元素加入红色实线边框。如果把大于符号换成空格，则会在所有项都增加样式。
+	+ *{样式;}表示把所有标签元素都匹配这些样式。
+	+ 标签名字:hover{样式;}表示伪类选择器，标签名字建议使用a标签，因为其兼容性比较好
+	+ 分组选择符，h1,span{color:red;}相当于h1{color:red;} span{color:red;}
+	+ 写重复的名字则可以继承自原有样式。
+	+ 权值，当一个标签有2种或以上的样式匹配的时候，权值越高，越容易匹配。标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100。继承的权值为0.1
+	+ 如果在html文件中对于同一个元素可以有多个css样式存在并且这多个css样式具有相同权重值，这种情况被称为css的层叠，内联样式表（标签内部）> 嵌入样式表（当前文件中）> 外部样式表（外部文件中）。
+	+ 如果样式中，与其分号前面增加!important则表明这个有最高权限。
+	+ font-family:"字体名称";设置字体
+	+ font-size:"像素大小" 设置字体大小
+	+ color:"颜色" 设置字体颜色
+	+ font-weight:bold; 设置文字加粗
+	+ font-style:italic; 设置文字斜体
+	+ text-decoration:underline; 设置文字下划线
+	+ text-decoration:line-through; 设置文字删除线
+	+ text-indent:2em; 设置缩进，2em代表文字2倍大小
+	+ line-height:1.5em;设置行间距
+	+ letter-spacing:50px;设置中文字间隔，字母间隔。
+	+ word-spacing:50px;设置英文单词间隔
+	+ text-align:center;设置对其方式，还有left,right
+
++ 元素
+	+ 块状元素
+		+ div
+		+ p
+		+ h1-h6
+		+ ol
+		+ ul
+		+ dl
+		+ table
+		+ address
+		+ blockquote
+		+ form
+    + 内联元素
+    	+ a
+    	+ span
+    	+ br
+    	+ i
+    	+ em
+    	+ strong
+    	+ lable
+    	+ q
+    	+ var
+    	+ cite
+    	+ code
+    + 内敛块状元素
+    	+ img
+    	+ input
+    + 块级元素
+    	+ a{display:block;}将内联元素a转换成块级元素,从而使a具有块级元素的特点。其特点如下
+    		1. 每个块级元素都从新的一行开始，并且其后的元素也另起一行。（真霸道，一个块级元素独占一行）
+    		2. 元素的高度、宽度、行高以及顶和底边距都可设置。
+    		3. 元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致），除非设定一个宽度。
+    	+ display:inline; 将块级元素转换成内联元素。其特点如下
+    		1. 和其他元素都在一行上；
+    		2. 元素的高度、宽度及顶部和底部边距不可设置；
+    		3. 元素的宽度就是它包含的文字或图片的宽度，不可改变。
+    	+ display:inline-block; 转换为内联块级元素，其特点如下
+    		1. 和其他元素都在一行上；
+    		2. 元素的高度、宽度、行高以及顶和底边距都可设置。
+
+## 剩下的再补充
