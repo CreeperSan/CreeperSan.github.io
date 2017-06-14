@@ -129,4 +129,34 @@ tags:
     		1. 和其他元素都在一行上；
     		2. 元素的高度、宽度、行高以及顶和底边距都可设置。
 
++ 盒模型
+	+ border:2px  solid  red; 等价于 border-width:2px;border-style:solid;border-color:red;
+	+ border-style(dash虚线 , dorred点线 , soild实线)
+	+ border-color颜色
+	+ border-width( thin|medium|thick|像素
+	+ border-top 仅设置上边框，用法同上，以此类推
+	+ padding内边距,margin外边距，同理
+
++ 布局模型
+	+ 分类
+		+ Flow流动模型
+		+ Float浮动模型
+		+ Layer层模型
+	+ Flow 流动模型
+		+ 默认的模型
+		+ 块级元素排序方式为从上到下
+		+ 内联元素排序方式为从左到右
+	+ 浮动模型
+		+ 非默认的模型
+		+ 块级元素从左到右排序
+		+ 指定float:left;属性可以指定位置(left,rignt)
+	+ 层模型，层模型有三种形式
+		+ position:absolute 绝对定位
+			+ 有点类似于绝对布局
+			+ left:20px，贴紧相对于父包含块顶部20像素，以此类推
+		+ position:relative 相对定位
+			+ 相对于默认的位置移动了多少像素，于相对布局差了远了
+		+ position:fixed; 固定定位
+			+ 相对于浏览器窗口的基础上移动了多少像素，也就是说，内容不会随着页面的滚动而滚动。就像是悬浮窗。
+
 ## 剩下的再补充
