@@ -1,0 +1,70 @@
+---
+layout:     post
+title:      "Kotlin入门"
+date:       2017-06-16 23:16:00
+author:     "CreeperSan"
+header-img: "img/post/170507about/header.jpg"
+tags:
+    - Kotlin
+    - 入门
+---
+
+## Kotlin
+
+### 变量
+变量后面加一个?，表示此变量是Nullable
+变量后面加!!，表示即使为空都要执行这个方法
+对象后面加?.方法()，表示如果为空则不执行这个方法
+
++ if空，执行语句
+	val data = ...
+	val email = data["email"] ?: throw IllegalStateException("Email is missing!")
+
+### 数据类型
++ Boolean布尔值，同java的boolean与Boolean，由编译器决定是装箱类型还是基本类型，不需要我们去关心
++ Number类型
+	+ 整形
+		+ Long(64)
+		+ Int(32)
+		+ Short(16)
+	+ 浮点数
+		+ Float(32)
+		+ Double(64)
+	+ 字节
+		+ Byte(8)
+	+ Tips
+		+ 定义变量的时候Kotlin支持16进制与2进制
+		+ 写数字的时候E代表10的E后面的数字次方
+		+ Float类里面有一个常量NaN(Not a Number)它与0/0的出来的结果并不相等，皆因它不是一个数，比较起来没有意义
+		+ 浮点类型的最小值表示的是最小的非0正数
++ Char类型
+	+ 字符对应JAVA的Character类型
+	+ 占2个字节，表示一个16为的Unicode字符
+	+ 字符用单引号引起来，例如'a','b','\n'
++ String类型
+	+ 对于String类型的比较需要注意 == 与 =\== 的区别
+	+ $符号可以直接把变量写在其后面自动连接成字符串，不仅仅支持变量，Kotlin还支持表达式，表达式需要用{}包围住
+	+ 使用3个双引号包含起来的字符串成为原始字符串，可以在里面直接换行，缩进，空格而不用去打转义字符。
++ 转义字符
+	+ \t 制表符
+	+ \b 光标后退一个字符
+	+ \n 回车
+	+ \r 光标回到行首
+	+ \' 单引号
+	+ \" 双引号
+	+ \\\\ 反斜杠
+	+ \\$ 美元符号，Kotlin支持美元符号开头的字符串模板
++ Tips
+	+ 打个比方，再java中，int是基本类型，Integer是装箱类型。但是再Kotlin中并没有做如此的区分,Kotlin编译器会自动进行转换
+	+ \u表示的就是一个Unicode，一个标准的Unicode格式可以是这样子 '\u000f'
+
+### 基本类型转换
++ 不可隐式转换
+	+ ```Kotlin
+	  val anInt:Int = 5
+      val aLong:Long = anInt.toLong()  //这里的toLong必要要，编译器不会隐式的把anInt转换成Long类型
+	  ```
+
+### 重要
++ Kotlin里面 == 与.equals()这两个方法是等价的。
++ 如果想比较2个对象是否表示同一个对象，则应该用 =\== ，他表示对象的引用值。类似于Java的 ==
