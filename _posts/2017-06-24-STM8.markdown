@@ -1,0 +1,29 @@
+
+---
+layout:     post
+title:      "关于STM8S10F3P6"
+date:       2017-06-24 21:44:00
+author:     "CreeperSan"
+header-img: "img/post/170507about/header.jpg"
+tags:
+    - C
+    - STVD
+    - 嵌入式
+    - STM8
+---
+
+## STM8的固件库使用
+
+想做一个智能插座，能通过手机连接来控制调整自动开关时间以及温湿度信息。一开始想用STM32来做，后来想想性能浪费太厉害了，这时突然想起ST公司有推出过8位微控制器STM8系列，由于网上，故入手最小系统板来测试测试，此处做了个笔记记录一下。
+
+#### GPIO
++ GPIO共有6个，分别是
+	1. GPIOA
+	2. GPIOB
+	3. GPIOC
+	4. GPIOD
+	5. GPIOE
+	6. GPIOF
+
+先挖个坑占着，稍后再补
+	
