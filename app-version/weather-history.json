@@ -4,15 +4,11 @@
 		"version":0,
 		"update-time":"2017-06-15",
 		"version-name":"beta 1.0",
-		"description":"+首次发布"
-		}
-	]
-},{
-	"versions":[
-		{
+		"description":"首次发布"
+		},{
 		"version":1,
 		"update-time":"2017-06-30",
-		"version-name":"beta 1.1",
+		"version-name":"beta 0.1.1",
 		"description":"+可以设定背景图片虚化了+提高必应图片背景的响应速度+更新版本历史界面+增加通知栏提醒+增加天气小部件"
 		}
 	]
