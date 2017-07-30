@@ -1,4 +1,3 @@
-
 ---
 layout:     post
 title:      "Kotlin中匿名内部类的写法"
