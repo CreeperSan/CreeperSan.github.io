@@ -1,0 +1,74 @@
+---
+layout:     post
+title:      "Android中的缓存工具类 - LruCache"
+date:       2017-08-20 17:32:00
+author:     "CreeperSan"
+header-img: "img/post/170507about/header.jpg"
+tags:
+    - Android
+    - 缓存
+---
+
+## 前言
+今天在写播放器的时候需要缓存视频的缩略图，本来想用Map来做的，突然想起以前看某个开源库源码里面有用到LruCache这个类，看起来应该是缓存数据用的，遂上网查了查用法，果然，做个笔记记下来。
+
+## 介绍
+> LruCache是android提供的一个缓存工具类，其算法是最近最少使用算法。它把最近使用的对象用“强引用”存储在LinkedHashMap中，并且把最近最少使用的对象在缓存值达到预设定值之前就从内存中移除。其在API12被引进，低版本可以用support包中的类。
+
+## 工作方式
+是一个持有有限个数的对象的强引用的缓存，每次当一个新的对象添加到缓存中，就会把这个对象的强引用添加到队列的头部位置中。当添加一个新的对象到体格已经满了的缓存中时，则队列中的最后一个对象会被移除队列以便垃圾回收。
+
+## 注意
++ 如果你的缓存对象所占用的资源需要被显式释放，则需要重写这个方法`entryRemoved(boolean,K,V,V)`
++ If a cache miss should be computed on demand for the corresponding keys, override create(K). This simplifies the calling code, allowing it to assume a value will always be returned, even when there's a cache miss.
++ 默认情况下，缓存大小是由缓存内对象的数目决定的，重写` sizeOf(K, V) `来划定缓存的大小，例子如下，这个例子划分了总共4MiB的空间来缓存bitmap
+	```JAVA
+   int cacheSize = 4 * 1024 * 1024; // 4MiB
+   LruCache<String, Bitmap> bitmapCache = new LruCache<String, Bitmap>(cacheSize) {
+       protected int sizeOf(String key, Bitmap value) {
+           return value.getByteCount();
+       }
+   }
+    ```
++ 这个缓存是线程安全的，Perform multiple cache operations atomically by synchronizing on the cache:
+	```JAVA
+    synchronized (cache) {
+     if (cache.get(key) == null) {
+         cache.put(key, value);
+     }
+   }
+    ```
++ 不能使用null作为键或者值，当从缓存中获取对象的时候返回null则明确表明这个缓存中没有这个键
++ Android 3.1 引入，低版本可以引用support包中的类
+
+## 构造方法
++ LruCache(int maxSize)
+
+## public 方法
++ `final int createCount()`返回`create(Object)`的计数值
++ `final void evictAll()`清除缓存，对所有缓存的对象调用` entryRemoved(boolean, K, V, V)`方法
++ `final int evictionCount()`返回被驱逐的对象的计数值
++ `final V get(V key)`返回key这个键对应的值，如果它存在与缓存中或者可以被`create（）`出来
++ `final int hitCount()`返回命中的已经出现在缓存中的对象的计数值
++ `final int maxSize()`用于指定缓存的大小，如果不重写这个方法则会返回缓存中的最大值
++ `final int missCount()`同HitCount，返回为Null或者需要新的值才能被`create()`的计数值
++ `final V put(K key,V value)`往缓存中添加对象
++ `final int putCount()`返回添加对象的次数
++ `final V remove(V value)`移除缓存中的对象，如果有这个玩意的话
++ `void resize(int maxSize)`重新设置缓存的大小
++ `final int size()`如果没有重写`sizeOf()`这个方法，则会返回缓存中对象的个数。
++ `final Map<K,V> snapshot()`返回这个缓存的拷贝，按访问顺序排序
++ `final String toString()`返回字符串的表达
++ `void trimToSize(int maxSize)`删除最早的对象知道大小符合为止
+
+## protected 方法
++ `V create(K key)`Called after a cache miss to compute a value for the corresponding key.
++ `void entryRemoved(boolean evicted,K key,V oldValue,V newValue)`对象被去除时调用
++ `int sizeOf(K key,V value)`返回单个对象的大小
+
+## 用法
+当成Map用就好啦~~
+
+## 参考链接
++ [LruCache | Android Developer](https://developer.android.google.cn/reference/android/util/LruCache.html)
++ [Developer_Kale - 详细解读LruCache类](http://www.cnblogs.com/tianzhijiexian/p/4248677.html)
