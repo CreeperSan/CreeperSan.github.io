@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Android中的缓存工具类 - LruCache"
+title:      "Android中的设置界面 - PreferenceFragment"
 date:       2017-08-23 18:54:00
 author:     "CreeperSan"
 header-img: "img/post/170507about/header.jpg"
