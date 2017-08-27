@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "关于Java中的注解"
-date:       2017-08-27 11:21:00
+date:       2017-08-27 15:37:00
 author:     "CreeperSan"
 header-img: "img/post/170507about/header.jpg"
 tags:
@@ -31,43 +31,19 @@ public class Testable{
 public @interface Test()
 ```
 ### JAVA中的元注解
-<table>
-	<tbody>
-    	<tr>
-        	<td>@Target</td>
-            <td>
-            	表示该注解可以用于什么地方。可能的ElementType参数包括<br>
-                CONSTRUCTOR : 构造函数的声明
-                FIELD : 域声明（包括emun实例）
-                LOCAL_VARIABLE : 局部变量声明
-                MEHOD : 方法声明
-                PARAMETER : 参数声明
-                TYPE : 类、接口（包括注解类型）或emun声明
-            </td>
-        <tr>
-        <tr>
-        	<td>@Retention</td>
-            <td>
-            	表示需要在什么级别保存该注解信息，可选的RetentionPolicy参数包括<br>
-                SOURCE : 仅保留在源代码，注解将被编译器丢弃
-                CLASS : 注解在Class文件中可用，但会被VM丢弃
-                RUNTIME : VM将在运行期间也保留注解，因此可以通过反射机制读取注解的信息
-            </td>
-        </tr>
-        <tr>
-        	<td>@Documented</td>
-            <td>
-            	将注解包含在JavaDoc中
-            </td>
-        </tr>
-        <tr>
-        	<td>@Inherited</td>
-            <td>
-            	允许子类继承父类中的注解
-            </td>
-        </tr>
-    </tbody>
-</table>
+1. @Target 【表示该注解可以用于什么地方。可能的ElementType参数包括】
+	+ CONSTRUCTOR : 构造函数的声明
+	+ FIELD : 域声明（包括emun实例）
+	+ LOCAL_VARIABLE : 局部变量声明
+	+ MEHOD : 方法声明
+	+ PARAMETER : 参数声明
+	+ TYPE : 类、接口（包括注解类型）或emun声明
+2. @Retention【表示需要在什么级别保存该注解信息，可选的RetentionPolicy参数包括】
+	+ SOURCE : 仅保留在源代码，注解将被编译器丢弃
+	+ CLASS : 注解在Class文件中可用，但会被VM丢弃
+	+ RUNTIME : VM将在运行期间也保留注解，因此可以通过反射机制读取注解的信息
+3. @Documented 【将注解包含在JavaDoc中】
+4. @Inherited【允许子类继承父类中的注解】
 
 ### 简单例子实现类似ButterKnife的效果
 ##### 步骤① 编写注解
