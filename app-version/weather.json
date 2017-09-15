@@ -1,6 +1,6 @@
 ﻿{
-	"version":0,
-	"update-time":"2017-06-15",
-	"version-name":"Alpha 1.0",
-	"description":"首次发布"
+	"version":2,
+	"update-time":"2017-09-18",
+	"version-name":"beta 1.2",
+	"description":"+修正空气质量卡片背景下无信息时字体过大+修正一处内存泄漏+提高响应速度"
 }
