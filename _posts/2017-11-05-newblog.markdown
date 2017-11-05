@@ -1,0 +1,23 @@
+---
+layout:     post
+title:      "新博客落成啦~"
+date:       2017-11-05 17:35:00
+author:     "CreeperSan"
+header-img: "img/post/170507about/header.jpg"
+tags:
+    - Blog
+---
+
+# 新博客落成啦
+哎\~终于狠下心在Vultr上租了一个虚拟主机，一个域名，花了些实现看了下HTML5，现在新博客总算是落成啦~
+
+简单说说配置~
+
+vultr乞丐版 512M内存 单核处理器 20G SSD
+前端 `HTML + Bootstrap + jquery + Ajax`
+后端 `Django + uWSGI + nginx`
+
+简简单单
+
+[戳我访问](http://www.creepersan.com)
+
